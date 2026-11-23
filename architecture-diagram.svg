@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#495057"/>
+    </marker>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0d6efd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a58ca;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layerGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e7f1ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d0e3ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layerGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3cd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffe8a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="layerGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d1ecf1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8e0e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="1000" height="60" fill="url(#headerGrad)" rx="10"/>
+  <text x="500" y="38" text-anchor="middle" fill="white" font-size="22" font-weight="bold">
+    TextCompare PWA — Архитектура приложения
+  </text>
+
+  <!-- MVVM Pattern Label -->
+  <text x="50" y="90" fill="#495057" font-size="14" font-weight="bold">MVVM Pattern</text>
+
+  <!-- UI Layer -->
+  <rect x="50" y="100" width="900" height="180" fill="url(#layerGrad1)" stroke="#0d6efd" stroke-width="2" rx="8"/>
+  <text x="70" y="125" fill="#0d6efd" font-size="16" font-weight="bold">UI Layer (View)</text>
+  <text x="70" y="142" fill="#6c757d" font-size="11">Vue 3 Components + Bootstrap 5</text>
+
+  <!-- App.vue -->
+  <rect x="70" y="155" width="120" height="50" fill="white" stroke="#0d6efd" stroke-width="1.5" rx="5"/>
+  <text x="130" y="177" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">App.vue</text>
+  <text x="130" y="192" text-anchor="middle" fill="#6c757d" font-size="10">RouterView</text>
+
+  <!-- ComparePage -->
+  <rect x="210" y="155" width="140" height="50" fill="white" stroke="#0d6efd" stroke-width="1.5" rx="5"/>
+  <text x="280" y="177" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">ComparePage.vue</text>
+  <text x="280" y="192" text-anchor="middle" fill="#6c757d" font-size="10">Coordinator</text>
+
+  <!-- TextEditor -->
+  <rect x="370" y="155" width="120" height="50" fill="white" stroke="#0d6efd" stroke-width="1.5" rx="5"/>
+  <text x="430" y="177" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">TextEditor.vue</text>
+  <text x="430" y="192" text-anchor="middle" fill="#6c757d" font-size="10">Input</text>
+
+  <!-- ComparisonResult -->
+  <rect x="510" y="155" width="150" height="50" fill="white" stroke="#0d6efd" stroke-width="1.5" rx="5"/>
+  <text x="585" y="177" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">ComparisonResult.vue</text>
+  <text x="585" y="192" text-anchor="middle" fill="#6c757d" font-size="10">Summary Display</text>
+
+  <!-- SimilarityScore -->
+  <rect x="680" y="155" width="150" height="50" fill="white" stroke="#0d6efd" stroke-width="1.5" rx="5"/>
+  <text x="755" y="177" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">SimilarityScore.vue</text>
+  <text x="755" y="192" text-anchor="middle" fill="#6c757d" font-size="10">Progress Bar</text>
+
+  <!-- Arrows within UI layer -->
+  <line x1="190" y1="180" x2="210" y2="180" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="180" x2="370" y2="180" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="195" x2="510" y2="195" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="660" y1="195" x2="680" y2="195" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- ViewModel Layer -->
+  <rect x="50" y="300" width="900" height="120" fill="url(#layerGrad2)" stroke="#ffc107" stroke-width="2" rx="8"/>
+  <text x="70" y="325" fill="#856404" font-size="16" font-weight="bold">ViewModel Layer</text>
+  <text x="70" y="342" fill="#6c757d" font-size="11">Composables — Business Logic</text>
+
+  <!-- useComparison -->
+  <rect x="350" y="355" width="200" height="50" fill="white" stroke="#ffc107" stroke-width="1.5" rx="5"/>
+  <text x="450" y="377" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">useComparison.ts</text>
+  <text x="450" y="392" text-anchor="middle" fill="#6c757d" font-size="10">State + API calls</text>
+
+  <!-- Arrows from UI to ViewModel -->
+  <line x1="280" y1="280" x2="450" y2="355" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="340" y="320" fill="#6c757d" font-size="10">compare()</text>
+
+  <!-- Model Layer -->
+  <rect x="50" y="440" width="900" height="120" fill="url(#layerGrad3)" stroke="#17a2b8" stroke-width="2" rx="8"/>
+  <text x="70" y="465" fill="#0c5460" font-size="16" font-weight="bold">Model Layer</text>
+  <text x="70" y="482" fill="#6c757d" font-size="11">State Management + Data Access</text>
+
+  <!-- Pinia Store -->
+  <rect x="150" y="495" width="180" height="50" fill="white" stroke="#17a2b8" stroke-width="1.5" rx="5"/>
+  <text x="240" y="517" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">comparison.ts</text>
+  <text x="240" y="532" text-anchor="middle" fill="#6c757d" font-size="10">Pinia Store</text>
+
+  <!-- LLM API Client -->
+  <rect x="400" y="495" width="180" height="50" fill="white" stroke="#17a2b8" stroke-width="1.5" rx="5"/>
+  <text x="490" y="517" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">llm-api.ts</text>
+  <text x="490" y="532" text-anchor="middle" fill="#6c757d" font-size="10">API Client</text>
+
+  <!-- Types -->
+  <rect x="650" y="495" width="120" height="50" fill="white" stroke="#17a2b8" stroke-width="1.5" rx="5"/>
+  <text x="710" y="517" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">types/index.ts</text>
+  <text x="710" y="532" text-anchor="middle" fill="#6c757d" font-size="10">Interfaces</text>
+
+  <!-- Arrows from ViewModel to Model -->
+  <line x1="420" y1="405" x2="490" y2="495" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="430" y="455" fill="#6c757d" font-size="10">compare(texts)</text>
+  <line x1="480" y1="405" x2="240" y2="495" stroke="#495057" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="350" y="455" fill="#6c757d" font-size="10">setResult()</text>
+
+  <!-- External Services -->
+  <rect x="50" y="580" width="900" height="90" fill="#f1f3f5" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5" rx="8"/>
+  <text x="70" y="605" fill="#495057" font-size="16" font-weight="bold">External Services</text>
+
+  <!-- LLM API -->
+  <rect x="350" y="615" width="200" height="45" fill="white" stroke="#dc3545" stroke-width="1.5" rx="5"/>
+  <text x="450" y="635" text-anchor="middle" fill="#212529" font-size="12" font-weight="bold">LLM API</text>
+  <text x="450" y="650" text-anchor="middle" fill="#6c757d" font-size="10">lm-studio :1234</text>
+
+  <!-- Arrow from API client to LLM -->
+  <line x1="490" y1="545" x2="450" y2="615" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="495" y="585" fill="#dc3545" font-size="10">HTTP POST</text>
+
+  <!-- Data Flow Labels -->
+  <text x="850" y="250" fill="#28a745" font-size="11" font-weight="bold">Data Flow:</text>
+  <text x="850" y="268" fill="#495057" font-size="10">Props ↓ Events ↑</text>
+  <text x="850" y="285" fill="#495057" font-size="10">Reactivity</text>
+
+  <!-- Tech Stack -->
+  <text x="50" y="690" fill="#6c757d" font-size="10">Stack: Vue 3 • TypeScript • Vite • Bootstrap 5 • Pinia • Vue Router • vite-plugin-pwa</text>
+</svg>
